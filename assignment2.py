@@ -1,6 +1,6 @@
 from socket import *
 
-class assignment2:
+class Assignment2:
     def __init__(self, year):
         self.year = year
 
