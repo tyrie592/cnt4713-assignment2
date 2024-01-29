@@ -10,7 +10,7 @@ class Assignment2:
         print(age)
 
     def listAnniversaries(self):
-        current_year = 2024  # Assuming today is the year 2024
+        current_year = 2022  # Assuming today is the year 2024
         anniversaries = []
         for year in range(self.year, current_year + 1, 10):
             if year % 10 == 0:
