@@ -6,19 +6,28 @@ class Assignment2:
 
     def tellAge(self, currentYear):
         age = currentYear - self.year
-        print("Your age is {age}")
+        print("Your age is", end = " ")
+        print(age)
 
     def listAnniversaries(self):
-        currentYear = 2024
-        anniversaries = [year for year in range(self.year + 10, currentYear + 1, 10)]
+        current_year = 2024  # Assuming today is the year 2024
+        anniversaries = []
+        for year in range(self.year, current_year + 1, 10):
+            if year % 10 == 0:
+                anniversaries.append(year % 100)
         return anniversaries
 
-    def modifyYear(self, n):
-        yearStr = str(self.year)
-        part1 = yearStr[:2] * n
-        part2 = yearStr[1::2] * n
-        result = part1 + part2
-        return result
+    def modifyYear(n):
+        num = a
+        res = ""
+        arr = str(num)
+        for i in range(n):
+            res += arr[:2]
+        num = num * n
+        lst = str(num)
+        arr1 = lst[::2]
+        res += arr1
+        return res
 
     def checkGoodString(string): #@staicmethod
         if len(string) < 9:
@@ -45,6 +54,10 @@ class Assignment2:
 
 #test code below
 a = Assignment2(2000)
+ret = a.tellAge(2024)
+print(ret)
+
+a = Assignment2(2000)
 ret = a.listAnniversaries()
 print(ret)
 
@@ -52,8 +65,8 @@ a = Assignment2(1991)
 ret = a.listAnniversaries()
 print(ret)
 
-a = Assignment2(1782)
-ret = a.modifyYear(3)
+a = 1782
+ret = Assignment2.modifyYear(3)
 print(ret)
 
 ret = Assignment2.checkGoodString("f1obar0more")
