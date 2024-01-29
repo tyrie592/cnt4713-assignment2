@@ -21,11 +21,17 @@ class Assignment2:
             i = i + 10
         return lst
 
-    def modifyYear(self, n):
-        year = str(self.year)
-        first_two_chars = year[:2]
-        odd_chars = year[::2]
-        return first_two_chars * n + odd_chars * n
+    def modifyYear(self, n): #I CANT GET THIS TO WORK
+        num = a
+        res = ""
+        arr = str(num)
+        for i in range(n):
+            res += arr[:2]
+            num = num * n
+            lst = str(num)
+            arr1 = lst[::2]
+            res += arr1
+        return res
 
     def checkGoodString(string): #@staicmethod
         if len(string) < 9:
